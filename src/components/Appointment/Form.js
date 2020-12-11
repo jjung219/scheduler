@@ -4,14 +4,14 @@ import InterviewerList from "components/InterviewerList"
 
 const Form = props => {
   const [name, setName ] = useState(props.name || "");
-  const [interviewer, setInterviewer ] = useState(props.interveiwer || null);
+  const [interviewer, setInterviewer ] = useState(props.interviewer || null);
 
   const reset = () => {
     setName("");
     setInterviewer(null);
   }
 
-  const cancel = (e) => {
+  const cancel = () => {
     reset();
     props.onCancel();
   }
@@ -38,7 +38,12 @@ const Form = props => {
             */
           />
         </form>
-        <InterviewerList interviewers={props.interviewers} interviewer={interviewer} value={interviewer} onChange={setInterviewer} />
+        <InterviewerList 
+          interviewers={props.interviewers}
+          interviewer={interviewer} 
+          value={interviewer} 
+          onChange={setInterviewer} 
+        />
       </section>
       <section className="appointment__card-right">
         <section className="appointment__actions">
