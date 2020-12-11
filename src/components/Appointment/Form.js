@@ -11,7 +11,7 @@ const Form = props => {
     setInterviewer(null);
   }
 
-  const cancel = () => {
+  const cancel = (e) => {
     reset();
     props.onCancel();
   }
