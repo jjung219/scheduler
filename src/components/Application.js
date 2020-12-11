@@ -72,8 +72,8 @@ export default function Application(props) {
           ...state,
           appointments
         })
+        return true
       })
-      .catch(err => console.log(err))
   }
 
   function cancelInterview (appointmentId) {
@@ -98,7 +98,6 @@ export default function Application(props) {
           appointments
         })
       })
-      .catch(err => console.log(err))
     
   }
 
