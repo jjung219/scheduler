@@ -55,4 +55,14 @@ const getInterviewersForDay = (state, day) => {
   return result;
 }
 
-export {getAppointmentsForDay, getInterview, getInterviewersForDay};
+const setSpots = (days, id, num) => {
+  for (const dayObj of days) {
+    if(dayObj.appointments.includes(id)) {
+      dayObj.spots = dayObj.spots + num;
+    }
+  }
+
+  return days;
+}
+
+export {getAppointmentsForDay, getInterview, getInterviewersForDay, setSpots};

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Axios from 'axios';
+import { setSpots } from "helpers/selectors";
 
 export default function useApplicationData() {
 
@@ -43,14 +44,18 @@ export default function useApplicationData() {
     setState({ ...state, day });
   }
 
+
   function bookInterview (id, interview) {
     console.log("booking interview...")
-    
+
     const appointment = {
       ...state.appointments[id],
       id: id,
       interview: { ...interview }
     };
+
+    const days = setSpots([...state.days], id, -1);
+
     return Axios
       .put(`/api/appointments/${id}`, appointment)
       .then(() => {
@@ -61,6 +66,7 @@ export default function useApplicationData() {
 
         setState({
           ...state,
+          days,
           appointments
         })
         return true
@@ -69,6 +75,8 @@ export default function useApplicationData() {
 
   function cancelInterview (appointmentId) {
     console.log("cancelling interview...")
+
+    const days = setSpots([...state.days], appointmentId, 1);
 
     return Axios
       .delete(`/api/appointments/${appointmentId}`)
@@ -86,6 +94,7 @@ export default function useApplicationData() {
 
         setState({
           ...state,
+          days,
           appointments
         })
       })
