@@ -23,7 +23,11 @@ npm test
 npm run storybook
 ```
 
-## App Screenshots
+## App Description
+One page Interview Scheduler app.
+
+### Important Note
+- When saving and deleting a page, a status page shows that the app is saving/deleting a page. The app purposely takes a few seconds to save/delete appointments to show the loading pages that are displayed to the user if the api request takes longer to be completed.
 
 Landing Page
 !["Landing page"](screenshots/app.png)
