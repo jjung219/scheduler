@@ -29,9 +29,9 @@ export default function useApplicationData() {
       Axios.get(appointmentsAPI),
       Axios.get(interviewersAPI)
     ]).then((all) => {
-      console.log(all[0].data); // first
-      console.log(all[1].data); // second
-      console.log(all[2].data); // second
+      // console.log(all[0].data); // first
+      // console.log(all[1].data); // second
+      // console.log(all[2].data); // second
     
       const [days, appointments, interviewers] = all;
       
