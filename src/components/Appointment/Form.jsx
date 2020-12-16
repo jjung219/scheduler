@@ -2,26 +2,26 @@ import React, { useState } from 'react';
 import Button from "components/Button";
 import InterviewerList from "components/InterviewerList"
 
-const Form = props => {
+function Form (props) {
   const [name, setName ] = useState(props.name || "");
   const [interviewer, setInterviewer ] = useState(props.interviewer || null);
   const [error, setError] = useState("");
 
-  const reset = () => {
+  function reset() {
     setName("");
     setInterviewer(null);
-  }
+  };
 
-  const cancel = () => {
+  function cancel() {
     reset();
     props.onCancel();
-  }
+  };
 
-  const submitHandler = (e) => {
+  function submitHandler(e) {
     e.preventDefault();
-    console.log("submitting the form...")
+    console.log("submitting the form...");
     validate();
-  }
+  };
 
   function validate() {
     if (name === "") {
@@ -30,7 +30,7 @@ const Form = props => {
     }
     setError("");
     props.onSave(name, interviewer);
-  }
+  };
 
   return (
     <main className="appointment__card appointment__card--create">
@@ -62,6 +62,6 @@ const Form = props => {
       </section>
     </main>
   )
-}
+};
 
 export default Form;

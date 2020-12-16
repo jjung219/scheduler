@@ -21,3 +21,9 @@ npm test
 ```sh
 npm run storybook
 ```
+
+## App Screenshots
+
+![Landing Page](https://github.com/jjung219/scheduler/tree/master/screenshots/app)
+
+![Adding an appointment](https://github.com/jjung219/scheduler/tree/master/screenshots/appointment-form)

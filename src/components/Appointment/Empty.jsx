@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Empty = props => {
+function Empty (props) {
   return (
     <main className="appointment__add" >
       <img
@@ -11,6 +11,6 @@ const Empty = props => {
       />
     </main>
   )
-}
+};
 
 export default Empty;

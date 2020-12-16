@@ -10,7 +10,7 @@ import useVisualMode from "hooks/useVisualMode";
 
 import "components/Appointment/styles.scss";
 
-const Appointment = (props) => {
+function Appointment (props) {
   const EMPTY = "EMPTY";
   const SHOW = "SHOW";
   const CREATE = "CREATE";
@@ -26,7 +26,7 @@ const Appointment = (props) => {
   );
 
   function save (name, interviewer) {
-    console.log("saving the name and interviewer...")
+    console.log("saving the name and interviewer...");
     const interview = {
       student: name,
       interviewer
@@ -39,20 +39,20 @@ const Appointment = (props) => {
       .catch((err) => {
         console.log("Error saving: ",err)
         transition(ERROR_SAVE, true);
-      })
-  }
+      });
+  };
 
   function destroy () {
-    console.log("deleting interview")
-    transition(DELETING, true)
+    console.log("deleting interview");
+    transition(DELETING, true);
 
     props
       .cancelInterview(props.id)
       .then(() => transition(EMPTY))
       .catch((err) => {
         transition(ERROR_DELETE, true);
-      })
-  }
+      });
+  };
   
   return (
     <article data-testid="appointment" className="appointment">
@@ -105,6 +105,6 @@ const Appointment = (props) => {
       )}
     </article>
   )
-}
+};
 
 export default Appointment;

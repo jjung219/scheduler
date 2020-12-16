@@ -15,7 +15,7 @@ export default function useApplicationData() {
       }
     },
     interviewers: {}
-  })
+  });
 
 
   const daysAPI = "/api/days"
@@ -38,15 +38,15 @@ export default function useApplicationData() {
       setState(prev => ({...prev, days: days.data, appointments: appointments.data, interviewers: interviewers.data}));
     });
     
-  }, [])
+  }, []);
 
   function setDay (day) {
     setState({ ...state, day });
-  }
+  };
 
 
   function bookInterview (id, interview) {
-    console.log("booking interview...")
+    console.log("booking interview...");
 
     const appointment = {
       ...state.appointments[id],
@@ -68,13 +68,13 @@ export default function useApplicationData() {
           ...state,
           days,
           appointments
-        })
+        });
         return true
-      })
-  }
+      });
+  };
 
   function cancelInterview (appointmentId) {
-    console.log("cancelling interview...")
+    console.log("cancelling interview...");
 
     const days = setSpots([...state.days], appointmentId, 1);
 
@@ -96,10 +96,9 @@ export default function useApplicationData() {
           ...state,
           days,
           appointments
-        })
-      })
-    
-  }
+        });
+      });
+  };
 
 
   return { state, setDay, bookInterview, cancelInterview}

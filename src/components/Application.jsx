@@ -2,16 +2,13 @@ import React from "react";
 
 import DayList from "components/DayList";
 import Appointment from "components/Appointment/index";
-// import helper function
 import {getAppointmentsForDay, getInterview, getInterviewersForDay} from "helpers/selectors";
 import useApplicationData from "hooks/useApplicationData";
-
 
 import "components/Application.scss";
 
 
-
-export default function Application(props) {
+export default function Application() {
   const {
     state,
     setDay,
@@ -42,8 +39,8 @@ export default function Application(props) {
         bookInterview={bookInterview}
         cancelInterview={cancelInterview}
       />
-    )
-  })
+    );
+  });
 
 
   return (
@@ -74,5 +71,5 @@ export default function Application(props) {
       </section>
     </main>
   );
-}
+};
 
