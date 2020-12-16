@@ -25,12 +25,12 @@ npm run storybook
 
 ## App Screenshots
 
-![Landing Page](https://github.com/jjung219/scheduler/tree/master/screenshots/app.png)
+!["Landing page"](screenshots/app.png)
 
-![Adding an appointment](https://github.com/jjung219/scheduler/tree/master/screenshots/appointment-form.png)
+!["Adding an appointment"](screenshots/appointment-form.png)
 
-![Editing an appointment](https://github.com/jjung219/scheduler/tree/master/screenshots/appointment-edit.png)
+![Editing an appointment](screenshots/appointment-edit.png)
 
-![Deleting an appointment](https://github.com/jjung219/scheduler/tree/master/screenshots/appointment-delete.png)
+![Deleting an appointment](screenshots/appointment-delete.png)
 
-![Booked appointments](https://github.com/jjung219/scheduler/tree/master/screenshots/appointments-booked.png)
+![Booked appointments](screenshots/appointments-booked.png)
