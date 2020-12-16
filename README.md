@@ -25,12 +25,17 @@ npm run storybook
 
 ## App Screenshots
 
+Landing Page
 !["Landing page"](screenshots/app.png)
 
+Adding an appointment
 !["Adding an appointment"](screenshots/appointment-form.png)
 
+Editing an appointment
 ![Editing an appointment](screenshots/appointment-edit.png)
 
+Deleting an appointment
 ![Deleting an appointment](screenshots/appointment-delete.png)
 
+Booked appointments
 ![Booked appointments](screenshots/appointments-booked.png)
