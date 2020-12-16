@@ -82,11 +82,50 @@ export default {
       });
     }
   }), 
-  put: jest.fn(() => {
-    return Promise.resolve({
-      status: 204,
-      statusText: "No Content"
-    })
+  put: jest.fn((url) => {
+    if (url === "/api/days", fixtures.days) {
+      return Promise.resolve({
+        status: 204,
+        statusText: "No Content",
+        data: fixtures.days
+      });
+    }
+    if (url === "/api/appointments", fixtures.appointments) {
+      return Promise.resolve({
+        status: 204,
+        statusText: "No Content",
+        data: fixtures.appointments
+      });
+    }
+    if (url === "/api/interviewers", fixtures.interview) {
+      return Promise.resolve({
+        status: 204,
+        statusText: "No Content",
+        data: fixtures.interviewers
+      });
+    }
+  }),
+  delete: jest.fn((url) => {
+    if (url === "/api/days", fixtures.days) {
+      return Promise.resolve({
+        status: 204,
+        statusText: "No Content",
+        data: fixtures.days
+      });
+    }
+    if (url === "/api/appointments", fixtures.appointments) {
+      return Promise.resolve({
+        status: 204,
+        statusText: "No Content",
+        data: fixtures.appointments
+      });
+    }
+    if (url === "/api/interviewers", fixtures.interview) {
+      return Promise.resolve({
+        status: 204,
+        statusText: "No Content",
+        data: fixtures.interviewers
+      });
+    }
   })
-
 }
