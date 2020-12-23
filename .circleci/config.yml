@@ -33,7 +33,7 @@ jobs:
       - run:
           name: Push Master to Production
           command: |
-            git push https://github.com/jjung219/scheduler/tree/circleci-project-setup
+            git push https://github.com/jjung219/scheduler.git master:ciclecie-project-setup
 
 workflows:
   version: 2
