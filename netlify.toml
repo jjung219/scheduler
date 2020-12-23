@@ -9,8 +9,9 @@
   publish = "build/"
 
   # Default build command.
-  command = "CI= npm run build"
+  command = "npm run build"
 
 [build.environment]
   REACT_APP_API_BASE_URL = "https://git.heroku.com/interview-scheduler-jj.git"
+  REACT_APP_WEBSOCKET_URL = "https://git.heroku.com/interview-scheduler-jj.git"
   SKIP_PREFLIGHT_CHECK=true
