@@ -32,7 +32,7 @@ jobs:
       - checkout
       - run:
           name: Push Master to Production
-          command: |
+          command:
             git push https://github.com/jjung219/scheduler.git master:cicleci-project-setup
 
 workflows:
