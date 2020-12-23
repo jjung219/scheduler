@@ -28,7 +28,7 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "f8:8b:bb:1e:0d:88:dd:94:06:fd:f5:d1:6f:be:63:9d"
+            - "98:12:10:81:56:1f:14:55:8f:4f:03:ba:95:a4:34:79"
       - checkout
       - run:
           name: Push Master to Production
